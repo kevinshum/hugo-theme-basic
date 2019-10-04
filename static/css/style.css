@@ -2,6 +2,10 @@ body {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  background-color: black;
+  /* cf tracked lh-copy ma0 pa0 white background-grey  ks-serif f3-ns f4-m f4"> */
+  
 }
 
 code {
@@ -28,3 +32,77 @@ code {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+a{
+  color: gold;
+
+  /* gold link hover-white ks-serif f4 b */
+
+}
+  .ks-sans-serif {
+    font-family: aileron, serif;
+    font-weight: 100;
+  }
+
+  .ks-serif {
+    font-family: operetta-32, sans-serif;
+    font-weight: 400, 600;
+  }
+
+  .ks-link {
+    margin-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: .125rem;
+  }
+
+  .ks-big {
+    font-size: 5em;
+  }
+
+
+  nav {
+    position: relative;
+    width: 100%;
+
+  }
+
+  .floating-menu {
+    background: rgb(25, 25, 25, 0.95);
+    z-index: 100;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+  }
+
+  .background-grey {
+    background: rgb(25, 25, 25);
+  }
+
+  @media only screen and (max-height: 500px) {
+    nav {
+      width: 100%;
+      position: relative;
+    }
+
+    .floating-menu {
+      padding: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    nav {
+      width: 100%;
+      position: relative;
+    }
+
+    .floating-menu {
+      display: block;
+      padding: 1rem;
+    }
+
+    a {
+      width: 100%;
+    }
+  }

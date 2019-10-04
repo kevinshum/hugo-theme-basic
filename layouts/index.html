@@ -1,287 +1,172 @@
-<title>Kevin Shum</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="author" content="Kevin Shum">
-<meta name="description" content="MIT Computer Science & Team USA Figure Skater">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
-<link rel="stylesheet" type="text/css" href="./css/styles.css" />
-<link rel="apple-touch-icon" sizes="120x120" href="./apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
-<link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
-<meta name="msapplication-TileColor" content="#ffc40d">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="https://use.typekit.net/mrp7zdv.css">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132778158-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', 'UA-132778158-1');
-</script>
-<!--   <style>
-.bg-gradient{
-background-image: linear-gradient( 109.6deg, rgba(20,30,48,1) 11.2%, rgba(36,59,85,1) 91.1% );
-}
-</style> -->
-<style>
-  .ks-sans-serif {
-    font-family: aileron, serif;
-    font-weight: 100;
-  }
-
-  .ks-serif {
-    font-family: operetta-32, sans-serif;
-    font-weight: 400, 600;
-  }
-
-  .ks-link {
-    margin-bottom: 1px;
-    border-bottom-style: solid;
-    border-bottom-width: .125rem;
-  }
-
-  .ks-big {
-    font-size: 5em;
-  }
+{{ partial "header.html" . }}
 
 
-  nav {
-    position: fixed;
-    width: 100%;
-
-  }
-
-  .floating-menu {
-    background: rgb(25, 25, 25, 0.95);
-    z-index: 100;
-    position: relative;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .background-grey {
-    background: rgb(25, 25, 25);
-  }
-
-  @media only screen and (max-height: 500px) {
-    nav {
-      width: 100%;
-      position: relative;
-    }
-
-    .floating-menu {
-      padding: 1rem;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-    nav {
-      width: 100%;
-      position: relative;
-    }
-
-    .floating-menu {
-      display: block;
-      padding: 1rem;
-    }
-
-    a {
-      width: 100%;
-    }
-  }
-</style>
-</head>
-
-<nav>
-  <div class="floating-menu">
-    <a href="/" class="white link hover-gold ks-serif f4 b">BIO</a><br>
-    <a href="/" class="white link hover-gold ks-serif f4 b">BLOG</a><br>
-    <a href="/" class="white link hover-gold ks-serif f4 b">PORTFOLIO</a><br>
-    <a href="/" class="white link hover-gold ks-serif f4 b">CONTACT</a>
+<article class="vh-100 dt w-100 lh-copy">
+  <div class="dtc v-mid tc white measure-wide">
+    <h1 class="ks-sans-serif tj tc">
+      <a href="#" class="gold link hover-white ks-serif">Kevin Shum</a> is a software engineer at <a
+        href="https://microsoft.com" class="white link hover-gold ks-serif" target="_blank">Microsoft</a> working on
+      the <a href="http://portal.azure.com" class="white link hover-gold ks-serif" target="_blank">Azure Portal</a>
+      team. He graduated <a href="https://hkn.mit.edu" class="white link hover-gold ks-serif" target="_blank">Eta
+        Kappa Nu</a> and <a href="http://tbp.mit.edu" class="white link hover-gold ks-serif" target="_blank">Tau
+        Beta Pi</a> from MIT in computer science. Shum has traveled the world as
+      a
+      former <a href="http://www.isuresults.com/bios/isufs00034586.htm" class="white link hover-gold ks-serif"
+        target="_blank">Team USA</a> figure skater.&nbsp;
+    </h1>
   </div>
-</nav>
+</article>
+
+<br>
+<br>
+
+<div class="cf bt b--gray f5">
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      RECENT
+    </h1>
+  </div>
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      <!-- pages -->
+      <!-- prettier-ignore -->
+      {{ range .Site.Params.menu }}
+      <a class="white link hover-gold ks-serif" href="{{ .url }}">{{ .name }}</a>
+      <br>
+      <!-- prettier-ignore -->
+      {{ end }}
+      <a class="link hover-white ks-serif f4 b gold" href="/post">MORE</a>&nbsp;
+
+    </h1>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="cf bt b--gray f5">
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      WORK
+    </h1>
+  </div>
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://en.wikipedia.org/wiki/Kevin_Shum"
+        target="_blank">MIT Media Lab</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="http://news.mit.edu/2019/kevin-shum-champion-figure-skater-thrives-as-mit-student-0127"
+        target="_blank">CSAIL
+      </a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://kevinshum.com/s/kevin-shum-day-31615"
+        target="_blank">ETH Zürich</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://gettyimages.com/photos/kevin-shum?autocorrect=none&amp;editorialproducts=sport&amp;family=editorial&amp;phrase=kevin%20shum&amp;sort=best#license"
+        target="_blank">Credit Suisse</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/"
+        target="_blank">Priceline.com</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/"
+        target="_blank">Microsoft</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://diablomag.com/January-2017/2018-Winter-Olympics-Hopeful/" target="_blank">Mitchell Johansson
+        Method</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://timesheraldonline.com/article/zz/20150301/NEWS/150309991" target="_blank">Ori Systems</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://mitadmissions.org/blogs/author/kshum/"
+        target="_blank">MIT Admissions</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"
+        target="_blank">Squarespace</a>
+      <br>
+      <a class="link hover-white ks-serif f4 b gold" href="http://web.mit.edu/kshum/www/portfolio.html"
+        target="_blank">MORE</a>&nbsp;
+    </h1>
+  </div>
+</div>
+
+<br>
+<br>
 
 
-<body id="0" class="cf tracked lh-copy ma0 pa0 white background-grey  ks-serif f3-ns f4-m f4">
+<div class="cf bt b--gray f5">
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      PRESS
+    </h1>
+  </div>
+  <div class="fl w-100 w-50-ns">
+    <h1 class="ks-sans-serif">
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="http://news.mit.edu/2019/kevin-shum-champion-figure-skater-thrives-as-mit-student-0127" target="_blank">
+        MIT News
+      </a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://kevinshum.com/s/kevin-shum-day-31615"
+        target="_blank">Kevin Shum Day</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://gettyimages.com/photos/kevin-shum?autocorrect=none&amp;editorialproducts=sport&amp;family=editorial&amp;phrase=kevin%20shum&amp;sort=best#license"
+        target="_blank">Getty Images</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/"
+        target="_blank">Associated Press</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://isuresults.com/bios/isufs00034586"
+        target="_blank">International Skating Union</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/"
+        target="_blank">Skating Club of Boston</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://diablomag.com/January-2017/2018-Winter-Olympics-Hopeful/" target="_blank">Diablo Magazine</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://timesheraldonline.com/article/zz/20150301/NEWS/150309991" target="_blank">Times Herald
+        News</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"
+        target="_blank">Oakland Tribune</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://mercurynews.com/2015/01/28/piedmontmontclair-around-the-horn-piedmonts-kevin-shum-shines-in-figure-skating/"
+        target="_blank">Mercury News</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://thetech.com/2017/02/16/figure-skating-hosts-competition" target="_blank">The Tech</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3"
+        href="https://studentlife.mit.edu/news/hobby-landing-spot-us-figure-skating-team" target="_blank">MIT
+        Division of Student Life</a>
+      <br>
+      <a class="white link hover-gold ks-serif mv1 mr3" href="https://youtube.com/watch?v=9dxua41fAgo"
+        target="_blank">Squarespace</a>
+      <br>
+      <a class="gold link hover-white ks-serif f4 b" href="https://en.wikipedia.org/wiki/Kevin_Shum"
+        target="_blank">MORE</a>&nbsp;
+    </h1>
+  </div>
+</div>
 
 
-  <div id="main" class="center mw8 ph3 ph3-m ph4-l ">
-
-    <article class="vh-100 dt w-100 lh-copy">
-      <div class="dtc v-mid tc white measure-wide">
-        <h1 class="ks-sans-serif tj tc">
-          <a href="#" class="gold link hover-white ks-serif">Kevin Shum</a> is a software engineer at <a
-            href="https://microsoft.com" class="white link hover-gold ks-serif" target="_blank">Microsoft</a> working on
-          the <a href="http://portal.azure.com" class="white link hover-gold ks-serif" target="_blank">Azure Portal</a>
-          team. He graduated <a href="https://hkn.mit.edu" class="white link hover-gold ks-serif" target="_blank">Eta
-            Kappa Nu</a> and <a href="http://tbp.mit.edu" class="white link hover-gold ks-serif" target="_blank">Tau
-            Beta Pi</a> from MIT in computer science. Shum has traveled the world as
-          a
-          former <a href="http://www.isuresults.com/bios/isufs00034586.htm" class="white link hover-gold ks-serif"
-            target="_blank">Team USA</a> figure skater.&nbsp; <a
-            href="mailto:kshum@mit.edu?Subject=Hello%20from%20kevinshum.com"
-            class="gold link hover-white ks-serif f4 b">CONTACT</a>&nbsp;
-        </h1>
-      </div>
-    </article>
-
-    <br>
-    <br>
+<br>
+<br>
 
 
-    <div class="cf bt b--gray f5">
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          RECENT
-        </h1>
-      </div>
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          <!-- pages -->
-          <!-- prettier-ignore -->
-          {{ range .Site.Params.menu }}
-          <a class="white link hover-gold ks-serif" href="{{ .url }}">{{ .name }}</a>
-          <br>
-          <!-- prettier-ignore -->
-          {{ end }}
-          <a class="link hover-white ks-serif f4 b gold" href="/">MORE</a>&nbsp;
-
-        </h1>
-      </div>
-    </div>
-
-    <br>
-    <br>
-
-    <div class="cf bt b--gray f5">
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          WORK
-        </h1>
-      </div>
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://en.wikipedia.org/wiki/Kevin_Shum"
-            target="_blank">MIT Media Lab</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="http://news.mit.edu/2019/kevin-shum-champion-figure-skater-thrives-as-mit-student-0127"
-            target="_blank">CSAIL
-          </a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://kevinshum.com/s/kevin-shum-day-31615"
-            target="_blank">ETH Zürich</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://gettyimages.com/photos/kevin-shum?autocorrect=none&amp;editorialproducts=sport&amp;family=editorial&amp;phrase=kevin%20shum&amp;sort=best#license"
-            target="_blank">Credit Suisse</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/"
-            target="_blank">Priceline.com</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/"
-            target="_blank">Microsoft</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://diablomag.com/January-2017/2018-Winter-Olympics-Hopeful/" target="_blank">Mitchell Johansson
-            Method</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://timesheraldonline.com/article/zz/20150301/NEWS/150309991" target="_blank">Ori Systems</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://mitadmissions.org/blogs/author/kshum/"
-            target="_blank">MIT Admissions</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"
-            target="_blank">Squarespace</a>
-          <br>
-          <a class="link hover-white ks-serif f4 b gold" href="http://web.mit.edu/kshum/www/portfolio.html"
-            target="_blank">MORE</a>&nbsp;
-        </h1>
-      </div>
-    </div>
-
-    <br>
-    <br>
-
-
-    <div class="cf bt b--gray f5">
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          PRESS
-        </h1>
-      </div>
-      <div class="fl w-100 w-50-ns">
-        <h1 class="ks-sans-serif">
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="http://news.mit.edu/2019/kevin-shum-champion-figure-skater-thrives-as-mit-student-0127"
-            target="_blank">
-            MIT News
-          </a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://kevinshum.com/s/kevin-shum-day-31615"
-            target="_blank">Kevin Shum Day</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://gettyimages.com/photos/kevin-shum?autocorrect=none&amp;editorialproducts=sport&amp;family=editorial&amp;phrase=kevin%20shum&amp;sort=best#license"
-            target="_blank">Getty Images</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://redbluffdailynews.com/2016/01/21/bay-area-teen-takes-junior-silver-at-us-figure-skating-championships/"
-            target="_blank">Associated Press</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://isuresults.com/bios/isufs00034586"
-            target="_blank">International Skating Union</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://scboston.org/membership-information/club-awards/club-award-the-robert-l-black-memorial-award/"
-            target="_blank">Skating Club of Boston</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://diablomag.com/January-2017/2018-Winter-Olympics-Hopeful/" target="_blank">Diablo Magazine</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://timesheraldonline.com/article/zz/20150301/NEWS/150309991" target="_blank">Times Herald
-            News</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://eastbaytimes.com/2015/02/26/piedmont-skater-competing-in-world-junior-championship/"
-            target="_blank">Oakland Tribune</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://mercurynews.com/2015/01/28/piedmontmontclair-around-the-horn-piedmonts-kevin-shum-shines-in-figure-skating/"
-            target="_blank">Mercury News</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://thetech.com/2017/02/16/figure-skating-hosts-competition" target="_blank">The Tech</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3"
-            href="https://studentlife.mit.edu/news/hobby-landing-spot-us-figure-skating-team" target="_blank">MIT
-            Division of Student Life</a>
-          <br>
-          <a class="white link hover-gold ks-serif mv1 mr3" href="https://youtube.com/watch?v=9dxua41fAgo"
-            target="_blank">Squarespace</a>
-          <br>
-          <a class="gold link hover-white ks-serif f4 b" href="https://en.wikipedia.org/wiki/Kevin_Shum"
-            target="_blank">MORE</a>&nbsp;
-        </h1>
-      </div>
-    </div>
-
-
-    <br>
-    <br>
-
-
-    <!--     <div id="footer" class="dt w-100 mt5-ns mt4 mb4-l">
+<!--     <div id="footer" class="dt w-100 mt5-ns mt4 mb4-l">
   <div class="dtc v-mid">
     <p> © KEVIN SHUM
     </p>
@@ -292,7 +177,5 @@ background-image: linear-gradient( 109.6deg, rgba(20,30,48,1) 11.2%, rgba(36,59,
   </div>
 </div>
 -->
-  </div>
-</body>
 
 </html>
