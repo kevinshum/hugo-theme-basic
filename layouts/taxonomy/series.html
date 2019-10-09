@@ -1,19 +1,10 @@
 {{ partial "header.html" . }}
-<body
-  lang="{{ .Site.LanguageCode }}"
-  class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns"
->
-  <span class="b">/ </span>
-  <a
-    href="{{ .Site.BaseURL  }}"
-    class="b bw1 bb pb1 no-underline black"
-    >{{ .Site.Title  }}</a
-  >
-  <span class="b"> / </span>
-  <a href="/series" class="b bw1 bb pb1 no-underline black">series</a>
+
+<body lang="{{ .Site.LanguageCode }}" class="sans-serif w-90 w-60-ns center center-ns mv2 mv5-ns">
+  <a href="/series" class="b bw1 bb pb1 no-underline white">SERIES</a>
   <span class="b"> / </span>
   <!-- prettier-ignore -->
-  <span class="b pb1 no-underline black">{{ .Title | lower }}</span>
+  <span class="b pb1 no-underline white">{{ .Title | lower }}</span>
 
   <section id="main" class="mt5">
     <div>
@@ -21,15 +12,8 @@
         <!-- prettier-ignore -->
         {{ range .Data.Pages.ByDate.Reverse }}
         <li class="list pl0 lh-copy">
-          <a
-            class="f3 b dib black no-underline"
-            href="{{ .Permalink}}"
-            >{{ .Title }}</a
-          >
-          <span
-            class="f6 gray db dib-ns"
-            >{{ .Date.Format "January 2, 2006" }}</span
-          >
+          <a class="f3 b dib white no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+          <span class="f6 gray db dib-ns">{{ .Date.Format "January 2, 2006" }}</span>
         </li>
         <!-- prettier-ignore -->
         {{ end }}
@@ -38,5 +22,6 @@
   </section>
 
   {{ partial "footer.html" . }}
-  </body>
+</body>
+
 </html>

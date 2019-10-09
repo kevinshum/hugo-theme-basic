@@ -2,7 +2,7 @@ body {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background: rgb(25, 25, 25);  
+  background: rgb(30, 30, 30);  
 }
 
 code {
@@ -39,15 +39,14 @@ a{
 }
   .ks-sans-serif {
     font-family: aileron, sans-serif;
-    font-weight: 100;
-    font-style: regular;
+    font-weight: 400;
+    font-style: normal;
   }
 
   .ks-serif {
-    /* font-family: operetta-32, serif; */
     font-family: aileron, sans-serif;
     font-weight: 700;
-    /* font-style: italic; */
+    font-style: normal;
   }
 
   .ks-link {
@@ -75,6 +74,12 @@ a{
     /* position: relative; */
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
+
+  }
+
+  .no-wrap{
+    flex: 0 0 auto; 
   }
 
   .background-grey {

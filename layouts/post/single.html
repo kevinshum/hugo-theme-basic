@@ -3,8 +3,9 @@
 <section id="main" class="mt5">
   <h1 itemprop="name" id="title">{{ .Title }}</h1>
   <span class="f6 gray">{{ .Date.Format "2 Jan 2006" }}</span>
+  <br><br>
 
-  <article itemprop="articleBody" id="content" class="lh-copy ks-sans-serif w-80">
+  <article itemprop="articleBody" id="content" class="lh-copy ks-sans-serif tj tc lh-copy w-100 ">
     {{ .Content }}
   </article>
 
@@ -17,11 +18,13 @@
   </span>
 
   {{ if and (.Site.Taxonomies.series) (isset .Params "series") }}
-  <section class="mt4">
+  <br>
+  <br>
+  <section class="mt4 bt b--gray ">
     {{ $readMore := ":wave:" }}
     {{ $series := .Params.series | urlize}}
     <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}"
-        class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
+        class="b bb bw1 pb1 no-underline white">{{ .Params.Series }}</a> series...</h3>
 
     {{ $posts := index .Site.Taxonomies.series $series }}
 
@@ -29,7 +32,7 @@
     <ul class="list pl0">
       {{ range where $posts "Title" "!=" .Title }}
       <li class="list pl0 lh-copy">
-        <a class="f4 b dib black no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
+        <a class="f4 b dib white no-underline" href="{{ .Permalink}}">{{ .Title }}</a>
         <span class="f6 gray">{{ .Date.Format "2 Jan 2006" }}</span>
       </li>
       {{ end }}
