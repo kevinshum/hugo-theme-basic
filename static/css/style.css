@@ -40,11 +40,14 @@ a{
   .ks-sans-serif {
     font-family: aileron, sans-serif;
     font-weight: 100;
+    font-style: regular;
   }
 
   .ks-serif {
-    font-family: operetta-32, serif;
-    font-weight: 400, 600;
+    /* font-family: operetta-32, serif; */
+    font-family: aileron, sans-serif;
+    font-weight: 700;
+    /* font-style: italic; */
   }
 
   .ks-link {
@@ -67,12 +70,11 @@ a{
   }
 
   .floating-menu {
-    background: rgb(25, 25, 25, 0.95);
+    /* background: rgb(25, 25, 25, 0.95); */
     /* z-index: 100; */
     /* position: relative; */
     display: flex;
     justify-content: space-between;
-    padding: 1em;
   }
 
   .background-grey {
