@@ -2,10 +2,7 @@ body {
   -webkit-font-smoothings: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  background-color: black;
-  /* cf tracked lh-copy ma0 pa0 white background-grey  ks-serif f3-ns f4-m f4"> */
-  
+  background: rgb(25, 25, 25);  
 }
 
 code {
@@ -41,12 +38,12 @@ a{
 
 }
   .ks-sans-serif {
-    font-family: aileron, serif;
+    font-family: aileron, sans-serif;
     font-weight: 100;
   }
 
   .ks-serif {
-    font-family: operetta-32, sans-serif;
+    font-family: operetta-32, serif;
     font-weight: 400, 600;
   }
 
@@ -62,25 +59,27 @@ a{
 
 
   nav {
-    position: relative;
-    width: 100%;
-
+    overflow: hidden;
+    /* background-color: #333; */
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
   }
 
   .floating-menu {
     background: rgb(25, 25, 25, 0.95);
-    z-index: 100;
-    position: relative;
+    /* z-index: 100; */
+    /* position: relative; */
     display: flex;
     justify-content: space-between;
-    padding-top: 1em;
+    padding: 1em;
   }
 
   .background-grey {
     background: rgb(25, 25, 25);
   }
 
-  @media only screen and (max-height: 500px) {
+  /* @media only screen and (max-height: 500px) {
     nav {
       width: 100%;
       position: relative;
@@ -89,9 +88,9 @@ a{
     .floating-menu {
       padding: 1rem;
     }
-  }
+  } */
 
-  @media only screen and (max-width: 500px) {
+  /* @media only screen and (max-width: 500px) {
     nav {
       width: 100%;
       position: relative;
@@ -105,4 +104,4 @@ a{
     a {
       width: 100%;
     }
-  }
+  } */
